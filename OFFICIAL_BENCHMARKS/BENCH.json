@@ -1,0 +1,286 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "DATA",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CARBON_CAPTURE\\DATA\\UPSTREAM_CLONE",
+    "git": {
+      "head": "70e07d6ebfa04fb78d71a230800a6e17b50baf92",
+      "url": "https://github.com/carbonplan/data",
+      "branch": "main",
+      "committed_at": "2026-04-06T11:54:45-07:00"
+    }
+  },
+  "metrics": {
+    "files_total": 68,
+    "source_files_scanned": 12,
+    "lines_of_code": 1212,
+    "languages": {
+      ".ipynb": 31,
+      ".yaml": 16,
+      ".py": 11,
+      ".md": 3,
+      "(none)": 2,
+      ".toml": 2,
+      ".yml": 1,
+      ".in": 1,
+      ".sh": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 5,
+    "unique": 5,
+    "by_ecosystem": {
+      "pypi": 5
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "intake",
+        "version": "<=0.7.0",
+        "source_file": "pyproject.toml",
+        "raw": "intake<=0.7.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "validators",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "validators"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "wget",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "wget"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "numpy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "numpy"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "xarray",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "xarray"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 4,
+    "files_with_findings": 3,
+    "severity": {
+      "high": 2,
+      "medium": 0,
+      "low": 2
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "scripts/mtbs/06_annual_downsampling.py",
+            "line": 32,
+            "cwe": "CWE-78",
+            "snippet": "os.system(cmd)"
+          },
+          {
+            "severity": "high",
+            "file": "carbonplan_data/utils.py",
+            "line": 128,
+            "cwe": "CWE-502",
+            "snippet": "sources = yaml.load(f, Loader=yaml.FullLoader)"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "carbonplan_data/utils.py",
+            "line": 230,
+            "cwe": "CWE-",
+            "snippet": ")  # TODO: handle date/time types"
+          },
+          {
+            "severity": "low",
+            "file": "carbonplan_data/tests/__init__.py",
+            "line": 98,
+            "cwe": "CWE-",
+            "snippet": "# TODO"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 0,
+        "findings": []
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:58ba87e3-5310-5583-86a8-f7d3ca69d0e2",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T07:04:51Z",
+      "component": {
+        "type": "application",
+        "name": "DATA",
+        "version": "70e07d6ebfa0",
+        "bom-ref": "pkg:generic/anticloud/DATA@70e07d6ebfa0",
+        "purl": "pkg:generic/anticloud/DATA@70e07d6ebfa0",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "70e07d6ebfa04fb78d71a230800a6e17b50baf92"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/carbonplan/data"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "intake",
+        "version": "<=0.7.0",
+        "purl": "pkg:pypi/intake@0.7.0",
+        "bom-ref": "pypi/intake@<=0.7.0"
+      },
+      {
+        "type": "library",
+        "name": "validators",
+        "version": "unspecified",
+        "purl": "pkg:pypi/validators",
+        "bom-ref": "pypi/validators@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "wget",
+        "version": "unspecified",
+        "purl": "pkg:pypi/wget",
+        "bom-ref": "pypi/wget@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "numpy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/numpy",
+        "bom-ref": "pypi/numpy@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "xarray",
+        "version": "unspecified",
+        "purl": "pkg:pypi/xarray",
+        "bom-ref": "pypi/xarray@unspecified"
+      }
+    ]
+  },
+  "elapsed_seconds": 6.27
+}

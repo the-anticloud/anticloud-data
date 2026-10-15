@@ -1,0 +1,74 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:58ba87e3-5310-5583-86a8-f7d3ca69d0e2",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T07:04:51Z",
+    "component": {
+      "type": "application",
+      "name": "DATA",
+      "version": "70e07d6ebfa0",
+      "bom-ref": "pkg:generic/anticloud/DATA@70e07d6ebfa0",
+      "purl": "pkg:generic/anticloud/DATA@70e07d6ebfa0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "70e07d6ebfa04fb78d71a230800a6e17b50baf92"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/carbonplan/data"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "intake",
+      "version": "<=0.7.0",
+      "purl": "pkg:pypi/intake@0.7.0",
+      "bom-ref": "pypi/intake@<=0.7.0"
+    },
+    {
+      "type": "library",
+      "name": "validators",
+      "version": "unspecified",
+      "purl": "pkg:pypi/validators",
+      "bom-ref": "pypi/validators@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "wget",
+      "version": "unspecified",
+      "purl": "pkg:pypi/wget",
+      "bom-ref": "pypi/wget@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "unspecified",
+      "purl": "pkg:pypi/numpy",
+      "bom-ref": "pypi/numpy@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "xarray",
+      "version": "unspecified",
+      "purl": "pkg:pypi/xarray",
+      "bom-ref": "pypi/xarray@unspecified"
+    }
+  ]
+}
